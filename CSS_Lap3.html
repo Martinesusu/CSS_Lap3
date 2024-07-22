@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lap 3</title>
+    <style>
+        .container {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .text {
+            position: relative;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 100px;
+            font-weight: bold;
+            background: linear-gradient(to top, blue 40%, white 40%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .text::before {
+            content: '';
+            position: absolute;
+            width: 150%;
+            height: 60%;
+            top: 0;
+            left: -130px;
+            background-color: blue;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">I'm the one</div>
+    </div> 
+</body>
+</html>
